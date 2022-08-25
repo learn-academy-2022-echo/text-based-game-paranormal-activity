@@ -7,21 +7,36 @@ answer = gets.chomp
 # def basement (basement_answer)
     if answer == 'bathroom'
              puts 'Oh noooo, there was an evil ghost in the bathroom and they unfortunately killed you! GAME OVER!'
-    if answer == 'go upstairs'
+    elsif answer == 'upstairs'
             puts 'You have safely gone up the stairs, do you want to go to the into the kitchen or into the bedroom?'
-            upstairs_answer = gets.chomp
+            else
+               puts "can't understand you, restart game 🤔"
+            upstairs_answer == gets.chomp
     if upstairs_answer == 'kitchen'
-            puts 'You went into the kitchen and were met by the ghost, you had a heart attack and died!'
-    elsif upstairs_answer == 'bedroom'
-            puts 'The ghost meets you in the bedroom and asks you this riddle'
-                bedroom_answer = gets.chomp
-    if answer != ''
-             puts 'You have answered incorrectly and the ghost killed you!' 
-   
+            puts 'You went into the kitchen and were met by the 👻 and you died!'
+            # kitchen_answer == gets.chomp
+            # if kitchen_answer == 3384
+            #       puts 'Thants correct! The ghost disappered and you are no longer hearing scary noises'  
+            # elsif kitchen_answer != 3384
+            #     puts 'Wrong answer, I am going to eat you! Bon appetit!' 
+
+            elsif upstairs_answer == 'bedroom'
+                puts "The ghost meets you in the bedroom and asks you this riddle, 'How do you eat an elphant?' enter you response below"
+                    bedroom_answer = gets.chomp
+                else
+                puts "can't understand you, restart game 🤔"
+    if bedroom_answer != 'one bite at a time'
+             puts 'You have answered incorrectly and the ghost killed you!Game Over 😢' 
+    elsif bedroom_answer == 'one bite at a time'
+        puts 'You answered correctly, I will spare your life. You can safely leave! 👻'
+    else
+        puts "can't understand you, restart game 🤔"
 
                 end
             end
         end
+    end
+    
 
 
 
